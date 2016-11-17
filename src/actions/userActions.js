@@ -7,17 +7,17 @@ export const SET_NAME = 'SET_NAME';
 //   }, 2000);
 // }
 
-const setName = () => {
-  return async (dispatch) => {
+// const setName = () => {
+//   return async (dispatch) => {
     
-    try {
-      const name = await doApiCall();
-      dispatch({ type: SET_NAME, payload: name })
-    } catch (e) {
-      dispatch({ type: 'error', name: 'error', value: e.message })
-    }
-  }
-}
+//     try {
+//       const name = await doApiCall();
+//       dispatch({ type: SET_NAME, payload: name })
+//     } catch (e) {
+//       dispatch({ type: 'error', name: 'error', value: e.message })
+//     }
+//   }
+// }
 
 const doApiPromiseCall = () => {
   return new Promise((resolve, reject) => {

@@ -9,7 +9,7 @@ module.exports = env => {
      // entry tells webpack where to start looking.
     entry: {
       app: path.join(__dirname, '../src/'),
-      vendor: ['react', 'react-dom', 'redux', 'react-redux', 'redux-thunk'],
+      vendor: ['react', 'react-dom', 'redux', 'react-redux', 'redux-thunk', 'react-router'],
     },
     /**
      * output tells webpack where to dump the files it has processed.

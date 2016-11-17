@@ -4,16 +4,39 @@ import { connect } from 'react-redux';
 import { User }  from './User';
 import { setName } from '../actions/userActions.js';
 
-const App = ({user, setName}) => (
-  <User user={user} setName={setName} />
-);
-  
-const mapStateToProps = (state) => {
+// filter
+// should we add this to state via action?
+const getUser = (user, seoName) => {
+  console.log('ajsiasijaijsiajsijij');
+  console.log(user);
+  console.log(seoName);
+
+  // couls dispatch action here?
+
   return {
-    user: state.userReducer,
-    math: state.mathReducer
+    ...user,
+    name: seoName
   };
 };
+
+// params passed by Router
+const App = ({user, setName, params}) => (
+  <User user={user} seoName={params.seoname} setName={setName} />
+);
+
+const mapStateToProps = (state, ownProps) => ({
+  user: getUser(
+    state.userReducer,
+    ownProps.params.seoname
+  ),
+});
+
+
+// const mapStateToProps = (state) => {
+//   return {
+//     user: state.userReducer
+//   };
+// };
 
 const mapDispatchToProps = (dispatch) => {
   return {
