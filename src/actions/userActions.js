@@ -1,6 +1,5 @@
 export const SET_NAME = 'SET_NAME';
 
-
 // async function doApiCall() {
 //   setTimeout(() => {
 //     return Promise.resolve('data');
